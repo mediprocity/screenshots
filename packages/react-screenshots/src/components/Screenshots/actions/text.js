@@ -33,7 +33,7 @@ function RenderTextarea ({ x, y, size, color, value, cursor, onFocus, onBlur, on
 }
 
 export default class Text extends Action {
-  static title = '文本'
+  static title = 'Text'
 
   static type = 'text'
 

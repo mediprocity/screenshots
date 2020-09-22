@@ -3,7 +3,7 @@ import Action from './action'
 import SizeColor from '../SizeColor'
 
 export default class Arrow extends Action {
-  static title = '箭头'
+  static title = 'Arrow'
 
   static type = 'arrow'
 

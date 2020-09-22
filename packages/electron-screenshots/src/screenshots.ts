@@ -94,7 +94,7 @@ export default class Screenshots extends Events {
       }
     })
 
-    $win.loadURL(`file://${require.resolve('react-screenshots/dist/index.html')}`)
+    $win.loadURL(`file://${require.resolve('electron-screenshots/lib/react-screenshots/index.html')}`)
     return $win
   }
 
@@ -144,7 +144,7 @@ export default class Screenshots extends Events {
         this.$win.setAlwaysOnTop(false)
         dialog
           .showSaveDialog(this.$win, {
-            title: 'Save图片',
+            title: 'Save',
             defaultPath: `${year}${month}${date}${hours}${minutes}${seconds}${milliseconds}.png`
           })
           .then(({ canceled, filePath }) => {

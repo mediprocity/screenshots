@@ -29,7 +29,7 @@ export default class Undo {
 
       if (!priority.history.length) {
         stack.splice(index, 1)
-        if (!stack.length && !action.$textarea) { // 针对Text可能出现无栈，文本框聚焦的情况
+        if (!stack.length && !action.$textarea) { // 针对Text可能出现无栈，Text框聚焦的情况
           action = null
           setContext({ cursor: 'grab' })
         }
