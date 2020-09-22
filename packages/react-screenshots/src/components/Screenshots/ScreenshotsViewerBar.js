@@ -83,7 +83,7 @@ export default class ScreenshotsViewerBar extends PureComponent {
                 if (action instanceof key) {
                   classNames.push('screenshots-viewer-bar-button-active')
                 }
-                if (title === '撤销' && !stack.length) {
+                if (title === 'Undo' && !stack.length) {
                   classNames.push('screenshots-viewer-bar-button-disabled')
                 }
                 return (

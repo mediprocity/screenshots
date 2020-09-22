@@ -3,7 +3,7 @@ import Action from './action'
 import SizeColor from '../SizeColor'
 
 export default class Rect extends Action {
-  static title = '矩形'
+  static title = 'Rect'
 
   static type = 'rect'
 
@@ -218,11 +218,11 @@ export default class Rect extends Action {
   }
 
   mouseup = (e, { el, ctx, context, setContext }) => {
-    if (this.isNew) { // 初次绘制取消
+    if (this.isNew) { // 初次绘制Cancel
       this.rect = null
       this.isNew = false
     } else {
-      // 路径操作的取消
+      // 路径操作的Cancel
       if (this.todo) {
         if (this.rect.history[0].ready) {
           this.rect.history.shift()

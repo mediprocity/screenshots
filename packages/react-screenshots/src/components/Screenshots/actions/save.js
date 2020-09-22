@@ -1,7 +1,7 @@
 import Action from './action'
 
 export default class Save extends Action {
-  static title = '保存'
+  static title = 'Save'
 
   static icon = 'screenshots-icon-save'
 

@@ -1,7 +1,7 @@
 import Action from './action'
 
 export default class Ok extends Action {
-  static title = '确定'
+  static title = 'Ok'
 
   static icon = 'screenshots-icon-ok'
 

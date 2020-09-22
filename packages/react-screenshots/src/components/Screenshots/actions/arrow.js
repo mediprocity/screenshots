@@ -178,11 +178,11 @@ export default class Arrow extends Action {
   }
 
   mouseup = (e, { el, ctx, context, setContext }) => {
-    if (this.isNew) { // 初次绘制取消
+    if (this.isNew) { // 初次绘制Cancel
       this.arrow = null
       this.isNew = false
     } else {
-      // 路径操作的取消
+      // 路径操作的Cancel
       if (this.todo) {
         if (this.arrow.history[0].ready) {
           this.arrow.history.shift()

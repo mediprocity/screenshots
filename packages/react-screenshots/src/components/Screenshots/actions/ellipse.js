@@ -3,7 +3,7 @@ import Action from './action'
 import SizeColor from '../SizeColor'
 
 export default class Ellipse extends Action {
-  static title = '圆形'
+  static title = 'Ellipse'
 
   static type = 'ellipse'
 
@@ -219,11 +219,11 @@ export default class Ellipse extends Action {
   }
 
   mouseup = (e, { el, ctx, context, setContext }) => {
-    if (this.isNew) { // 初次绘制取消
+    if (this.isNew) { // 初次绘制Cancel
       this.ellipse = null
       this.isNew = false
     } else {
-      // 路径操作的取消
+      // 路径操作的Cancel
       if (this.todo) {
         if (this.ellipse.history[0].ready) {
           this.ellipse.history.shift()

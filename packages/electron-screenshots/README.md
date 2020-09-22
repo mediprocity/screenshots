@@ -16,21 +16,21 @@ import Screenshots from './screenshots'
 app.on('ready', () => {
   const screenshots = new Screenshots()
   globalShortcut.register('ctrl+shift+a', () => screenshots.startCapture())
-  // 点击确定按钮回调事件
+  // 点击Ok按钮回调事件
   screenshots.on('ok', (e, { viewer }) => {
     console.log('capture', viewer)
   })
-  // 点击取消按钮回调事件
+  // 点击Cancel按钮回调事件
   screenshots.on('cancel', () => {
     console.log('capture', 'cancel1')
   })
   screenshots.on('cancel', e => {
     // 执行了preventDefault
-    // 点击取消不会关闭截图窗口
+    // 点击Cancel不会关闭截图窗口
     e.preventDefault()
     console.log('capture', 'cancel2')
   })
-  // 点击保存按钮回调事件
+  // 点击Save按钮回调事件
   screenshots.on('save', (e, { viewer }) => {
     console.log('capture', viewer)
   })
@@ -102,19 +102,19 @@ type SaveData = CaptureData
 | 名称   | 说明         | 回调参数                                  |
 | ------ | ------------ | ----------------------------------------- |
 | ok     | 截图确认事件 | `event`:事件对象, `data:OkData`: 截图信息 |
-| cancel | 截图取消事件 | `event`:事件对象                          |
-| save   | 截图保存事件 | `event`:事件对象，`data:OkData`: 截图信息 |
+| cancel | 截图Cancel事件 | `event`:事件对象                          |
+| save   | 截图Save事件 | `event`:事件对象，`data:OkData`: 截图信息 |
 
-`event`对象可调用`preventDefault`方法来阻止默认事件，例如阻止默认保存事件
+`event`对象可调用`preventDefault`方法来阻止默认事件，例如阻止默认Save事件
 
 ```js
 const screenshots = new Screenshots()
 
 screenshots.on('save', (e, data) => {
-  // 阻止插件自带的保存功能
-  // 用户自己控制保存功能
+  // 阻止插件自带的Save功能
+  // 用户自己控制Save功能
   e.preventDefault()
-  // 用户可在这里自己定义保存功能
+  // 用户可在这里自己定义Save功能
   console.log('capture', data)
 })
 

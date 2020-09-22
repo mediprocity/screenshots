@@ -1,5 +1,5 @@
 export default class Undo {
-  static title = '撤销'
+  static title = 'Undo'
 
   static type = 'undo'
 

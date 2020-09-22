@@ -4,7 +4,7 @@ import Size from '../Size'
 
 // inspired by https://github.com/zhengsk/image-masaic
 export default class Mosaic extends Action {
-  static title = '马赛克'
+  static title = 'Mosaic'
 
   static type = 'mosaic'
 

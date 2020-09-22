@@ -3,7 +3,7 @@ import Action from './action'
 import SizeColor from '../SizeColor'
 
 export default class Brush extends Action {
-  static title = '涂鸦'
+  static title = 'Brush'
 
   static type = 'brush'
 
@@ -182,11 +182,11 @@ export default class Brush extends Action {
   }
 
   mouseup = (e, { el, ctx, context, setContext }) => {
-    if (this.isNew) { // 初次绘制取消
+    if (this.isNew) { // 初次绘制Cancel
       this.brush = null
       this.isNew = false
     } else {
-      // 路径操作的取消
+      // 路径操作的Cancel
       if (this.todo) {
         if (this.brush.history[0].ready) {
           this.brush.history.shift()

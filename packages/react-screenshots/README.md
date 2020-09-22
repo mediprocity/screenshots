@@ -22,15 +22,15 @@ export default class App extends PureComponent {
   }
 
   onSave = ({ viewer, dataURL }) => {
-    console.log('点击了保存按钮', dataURL, viewer)
+    console.log('点击了Save按钮', dataURL, viewer)
   }
 
   onCancel = () => {
-    console.log('点击了取消按钮')
+    console.log('点击了Cancel按钮')
   }
 
   onOk = ({ dataURL, viewer }) => {
-    console.log('点击了确定按钮', dataURL, viewer)
+    console.log('点击了Ok按钮', dataURL, viewer)
   }
 
   render() {
@@ -80,11 +80,11 @@ ipcMain.once('SCREENSHOTS::CAPTURED', () => {
   $win.focus()
 })
 
-// 点击保存按钮事件
+// 点击Save按钮事件
 ipcMain.on('SCREENSHOTS::SAVE', (e, data) => {})
-// 点击取消按钮事件
+// 点击Cancel按钮事件
 ipcMain.on('SCREENSHOTS::CANCEL', e => {})
-// 点击确定按钮事件
+// 点击Ok按钮事件
 ipcMain.on('SCREENSHOTS::OK', (e, data) => {})
 ```
 
@@ -109,9 +109,9 @@ interface Data {
 | image    | 要编辑的图像资源地址 | `string`                       |
 | width    | 画布宽度             | `number`                       |
 | height   | 画布宽度             | `number`                       |
-| onSave   | 保存按钮回调         | `function (data:Data):void {}` |
-| onCancel | 取消按钮回调         | `function ():void {}`          |
-| onOk     | 取消按钮回调         | `function (data:Data):void {}` |
+| onSave   | Save按钮回调         | `function (data:Data):void {}` |
+| onCancel | Cancel按钮回调         | `function ():void {}`          |
+| onOk     | Cancel按钮回调         | `function (data:Data):void {}` |
 
 ### example
 

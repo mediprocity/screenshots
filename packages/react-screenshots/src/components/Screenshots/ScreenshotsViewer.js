@@ -15,7 +15,7 @@ export default class ScreenshotsViewer extends PureComponent {
   // 鼠标起始位置
   point = null
 
-  // 保存初始的viewer数据
+  // Save初始的viewer数据
   viewer = null
 
   constructor (props) {
@@ -324,7 +324,7 @@ export default class ScreenshotsViewer extends PureComponent {
   onAction = Action => {
     const lastAction = this.props.action
     if (
-      Action.type !== 'undo' && // 撤销action不执行
+      Action.type !== 'undo' && // Undoaction不执行
       lastAction &&
       Action.prototype !== Object.getPrototypeOf(lastAction)
     ) {

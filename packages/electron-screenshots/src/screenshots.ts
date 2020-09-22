@@ -144,7 +144,7 @@ export default class Screenshots extends Events {
         this.$win.setAlwaysOnTop(false)
         dialog
           .showSaveDialog(this.$win, {
-            title: '保存图片',
+            title: 'Save图片',
             defaultPath: `${year}${month}${date}${hours}${minutes}${seconds}${milliseconds}.png`
           })
           .then(({ canceled, filePath }) => {

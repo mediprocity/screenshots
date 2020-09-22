@@ -1,7 +1,7 @@
 import Action from './action'
 
 export default class Cancel extends Action {
-  static title = '取消'
+  static title = 'Cancel'
 
   static icon = 'screenshots-icon-cancel'
 
