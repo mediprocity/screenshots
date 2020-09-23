@@ -93,7 +93,7 @@ export default class ScreenshotsMagnifier extends PureComponent {
         <div className="screenshots-magnifier-explain">
           <div className="screenshots-magnifier-explain-rgb">RGB：{rgb}</div>
           <div className="screenshots-magnifier-explain-site">
-            坐标：({x},{y})
+            Coordinates：({x},{y})
           </div>
         </div>
       </div>
