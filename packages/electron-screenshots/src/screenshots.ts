@@ -1,4 +1,4 @@
-import { dialog, ipcMain, Rectangle, clipboard, nativeImage, BrowserWindow } from 'electron'
+import { dialog, ipcMain, Rectangle, nativeImage, BrowserWindow } from 'electron'
 import fs from 'fs'
 import Event from './event'
 import Events from 'events'
@@ -109,7 +109,6 @@ export default class Screenshots extends Events {
       const event = new Event()
       this.emit('ok', event, data)
       if (!event.defaultPrevented) {
-        clipboard.writeImage(nativeImage.createFromDataURL(data.dataURL))
         this.endCapture()
       }
     })
