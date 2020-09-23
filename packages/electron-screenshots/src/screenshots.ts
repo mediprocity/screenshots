@@ -1,4 +1,4 @@
-import { dialog, ipcMain, Rectangle, nativeImage, BrowserWindow } from 'electron'
+import { dialog, ipcMain, Rectangle, BrowserWindow } from 'electron'
 import fs from 'fs'
 import Event from './event'
 import Events from 'events'
